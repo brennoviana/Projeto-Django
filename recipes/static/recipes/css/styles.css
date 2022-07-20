@@ -158,17 +158,17 @@ body {
 }
 
 .list-item {
-    max-width: 440px;
+    width: 440px;
     background: white;
     box-shadow: -5px 5px 10px rgb(0, 0, 0, .3);
     transform: (1);
     transition: 300ms ease-in-out;
-    border-radius: .6rem;
     overflow: hidden;
     margin: 0 auto;
     margin-top: 30px;
     border: 2px solid black;
     margin-bottom: 55px;
+    border-radius: 4px;
 
 
 
@@ -188,7 +188,7 @@ body {
     padding-top: 20px;
     padding-left: 15px;
     padding-bottom: 15px;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .recipe-author-container {
@@ -224,6 +224,7 @@ body {
     background: var(--color-gray-3);
     padding-top: 20px;
     padding-bottom: 20px;
+ 
 
 }
 
@@ -238,6 +239,19 @@ body {
     margin: auto;
     padding-right: 15px;
 }
+
+.container-list-detail .list{
+    grid-template-columns: auto;
+}
+.container-list-detail .list-item{
+    width: 840px;
+}
+
+.container-list-detail .list-item:hover{
+    transform: scale(1);
+    box-shadow: -5px 5px 10px rgb(0, 0, 0, .3);
+}
+
 
 .footer-recipe {
     background: var(--color-primary-dark);
