@@ -164,7 +164,7 @@ body {
     transform: (1);
     transition: 300ms ease-in-out;
     overflow: hidden;
-    margin: 0 auto;
+
     margin-top: 30px;
     border: 2px solid black;
     margin-bottom: 55px;
@@ -174,7 +174,7 @@ body {
 
 }
 
-.list img {
+.list-item img {
     max-width: 100%;
 }
 
@@ -240,14 +240,16 @@ body {
     padding-right: 15px;
 }
 
-.container-list-detail .list{
-    grid-template-columns: auto;
-}
-.container-list-detail .list-item{
-    width: 840px;
+.list-detail{
+    margin-top: 35px;
 }
 
-.container-list-detail .list-item:hover{
+.list-detail .list-item{
+    width: 840px;
+    margin: auto;
+}
+
+.list-detail .list-item:hover{
     transform: scale(1);
     box-shadow: -5px 5px 10px rgb(0, 0, 0, .3);
 }
