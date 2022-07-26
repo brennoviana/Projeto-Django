@@ -65,8 +65,6 @@ body {
 }
 
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
     text-align: center;
 
 }
@@ -143,18 +141,15 @@ body {
 }
 
 .container-list-main {
-    border-radius: 50rem;
-    margin-top: 15px;
+    width: 1500px;
+    margin: auto;
 
 }
 
 .list {
     display: grid;
     grid-template-columns: auto auto auto;
-    width: 1500px;
-    margin: auto;
-
-
+    margin-top: 15px;
 }
 
 .list-item {
@@ -164,13 +159,11 @@ body {
     transform: (1);
     transition: 300ms ease-in-out;
     overflow: hidden;
-
-    margin-top: 30px;
     border: 2px solid black;
-    margin-bottom: 55px;
-    border-radius: 4px;
-
-
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
 
 }
 
@@ -185,9 +178,7 @@ body {
 }
 
 .h2-list {
-    padding-top: 20px;
-    padding-left: 15px;
-    padding-bottom: 15px;
+    margin: 5px;
     font-size: 40px;
 }
 
@@ -199,6 +190,11 @@ body {
 .recipe-author-item {
     margin-right: 10px;
     font-size: 14px;
+    
+}
+
+.recipe-author-item i{
+    padding: 2px;
 }
 
 .recipe-author-container a {
@@ -219,20 +215,17 @@ body {
 }
 
 .recipe-info-container {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    justify-content: space-between;
     background: var(--color-gray-3);
     padding-top: 20px;
     padding-bottom: 20px;
  
-
 }
-
-.recipe-time {
+.recipe-time,
+.recipe-portion{
+    text-align: center;
     margin: 0 auto;
-    padding-left: 15px;
-
-
 }
 
 .recipe-portion {
