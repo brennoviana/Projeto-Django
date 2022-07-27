@@ -1,36 +1,49 @@
 <div class="list-item">
-    <img src="https://via.placeholder.com/1280x720.png" alt="">
-    <h2 class="h2-list"> {{ recipe.title }} </h2>
+    <a href=" {% url "recipes:recipe" recipe.id %} ">
+        <img src="{{ recipe.cover.url }}" alt="">
+    </a>
+    <a href=" {% url "recipes:recipe" recipe.id %} ">
+        <h2 class="h2-list"> {{ recipe.title }} </h2>
+    </a>
     <div class="recipe-author-container">               
         <span class="recipe-author-item">
             <i class="fas fa-user"></i>{{ recipe.author.first_name }} {{ recipe.author.last_name }}
         </span>
         <span class="recipe-author-item">
-            <i class="fas fa-calendar-alt"></i> {{ recipe.created_at }}
+            <i class="fas fa-calendar-alt"></i> {{ recipe.created_at}}
         </span>
         <span class="recipe-author-item">
             <a href="/recipes/category/cafe-da-manha/">
-                <i class="fas fa-layer-group"></i>Café da manhã
+                <i class="fas fa-layer-group"></i>{{ recipe.category.name }}
             </a>
         </span>
     </div>
     <div class="text-recipe">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In iste, quis voluptate sed corrupti dolorem nihil ex rerum non expedita, nisi dignissimos ipsa exercitationem. Ipsa eligendi laboriosam dolor labore odio!
+        <p> {{ recipe.description}}
         </p>
     </div>
     <dir class="recipe-info-container">
         <div class="recipe-time">
             <h3 class="recipe-time-title"><i class="fas fa-stopwatch"></i> Preparo</h3>
-            <span class="recipe-meta-text"> 0 Minutos</span>
+            <span class="recipe-meta-text"> {{ recipe.preparation_time }} {{ recipe.preparation_time_unit}}</span>
         </div>
         <div class="recipe-portion">
             <h3 class="recipe-portion-title"><i class="fas fa-pizza-slice"></i> Porções</h3>
-            <span class="recipe-meta-text"> 0 Porções</span>
+            <span class="recipe-meta-text"> {{ recipe.servings }} {{ recipe.servings_unit}}</span>
         </div>
     </dir>
-    <div class="footer-recipe">
-        <a href="/recipes/3">
-            <i class="fa-solid fa-eye"></i><span class="span-footer">Ver mais...</span>
-        </a>
-    </div>
+    {% if not detail_page  %}
+        <div class="footer-recipe">
+            <a href="{% url "recipes:recipe" recipe.id %}">
+                <i class="fa-solid fa-eye"></i><span class="span-footer">Ver mais...</span>
+            </a>
+        </div>
+    {% endif %}
+    
+    {% if detail_page is True %}
+    <div class="preparations-steps">
+        {{ recipe.preparation_steps | linebreaksbr}}
+    </div> 
+    {% endif %}
+    
 </div>

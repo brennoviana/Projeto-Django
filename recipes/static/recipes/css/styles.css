@@ -146,6 +146,11 @@ body {
 
 }
 
+.container-list-main a {
+    text-decoration: none;
+    color: #000;
+}
+
 .list {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -164,6 +169,7 @@ body {
     margin: 0 auto;
     margin-bottom: 25px;
     margin-top: 25px;
+    height: fit-content;
 
 }
 
@@ -177,9 +183,15 @@ body {
 
 }
 
+
 .h2-list {
     margin: 5px;
     font-size: 40px;
+
+}
+
+.h2-list a{
+    text-decoration: none;
 }
 
 .recipe-author-container {
@@ -274,6 +286,10 @@ body {
     margin-top: 25px;
 
 
+}
+
+.preparations-steps {
+    padding: 15px;
 }
 
 .developer a,
