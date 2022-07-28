@@ -2,6 +2,8 @@
 {% block title %}Receita{% endblock title %}receita
 {% block content %}
 <div class='list-detail'>
-        {% include 'recipes/partials/body.html' %}
+        {% for recipe in recipes  %}
+                {% include 'recipes/partials/body.html' %}
+        {% endfor %}
 </div>
 {% endblock content %}

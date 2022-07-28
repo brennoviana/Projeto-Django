@@ -1,8 +1,8 @@
 <div class="list-item">
-    <a href=" {% url "recipes:recipe" recipe.id %} ">
+    <a href=" {% url "recipes:recipe" recipe.slug %} ">
         <img src="{{ recipe.cover.url }}">
     </a>
-    <a href=" {% url "recipes:recipe" recipe.id %} ">
+    <a href=" {% url "recipes:recipe" recipe.slug %} ">
         <h2 class="h2-list"> {{ recipe.title }} </h2>
     </a>
     <div class="recipe-author-container">               
@@ -39,7 +39,7 @@
     </dir>
     {% if not detail_page  %}
         <div class="footer-recipe">
-            <a href="{% url "recipes:recipe" recipe.id %}">
+            <a href="{% url "recipes:recipe" recipe.slug %}">
                 <i class="fa-solid fa-eye"></i><span class="span-footer">Ver mais...</span>
             </a>
         </div>

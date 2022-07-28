@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from utils.recipes.factory import make_recipe
 
 from recipes.models import Recipe
 
@@ -18,7 +17,9 @@ def category(request, category_id):
     })
 
 
-def recipe(request, id):
+def recipe(request, recipe_slug):
+    recipe = Recipe.objects.filter(slug=recipe_slug)
     return render(request, "recipes/pages/recipe-view.html", context={
         "detail_page": True,
+        "recipes": recipe
     })
