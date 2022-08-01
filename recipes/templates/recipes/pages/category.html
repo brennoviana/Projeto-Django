@@ -1,0 +1,11 @@
+{% extends 'recipes/base-template/base.html' %}
+{% block title %}Categoria{% endblock title %}
+
+{% block content %}
+<div class="list">
+    {% for recipe in recipes %}
+        {% include "recipes/partials/body.html" %}
+    {% endfor %}
+</div>
+{% endblock content %}
+
