@@ -19,8 +19,8 @@ def category(request, category_id):
     })
 
 
-def recipe(request, recipe_slug):
-    recipe = Recipe.objects.filter(slug=recipe_slug)
+def recipe(request, recipe_id):
+    recipe = Recipe.objects.filter(id=recipe_id)
     return render(request, "recipes/pages/recipe-view.html", context={
         "detail_page": True,
         "recipes": recipe
